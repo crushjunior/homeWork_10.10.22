@@ -1,6 +1,6 @@
 package transport;
 
-public class CargoCar extends Car implements Competing{
+public final class CargoCar extends Car implements Competing{
     private static final int MAX_SPEED = 222;
     private static final double BEST_LAP = 1.31;
     private TypeWeight typeWeight;
@@ -38,6 +38,11 @@ public class CargoCar extends Car implements Competing{
     @Override
     public boolean service() {
         return Math.random() > 0.7;
+    }
+
+    @Override
+    public void repair() {
+        System.out.println(getModel() + " " + getBrand() + " закончен ремонт");
     }
 
     @Override

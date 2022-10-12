@@ -1,6 +1,6 @@
 package transport;
 
-public class Bus extends Car implements Competing{
+public final class Bus extends Car implements Competing{
     private static final int MAX_SPEED = 201;
     private static final double BEST_LAP = 1.36;
     private Capacity capacity;
@@ -39,6 +39,11 @@ public class Bus extends Car implements Competing{
     public boolean service() {
         System.out.println("Автобус " + getBrand() + " " + getModel() + " в диагностике не требуется");
         return true;
+    }
+
+    @Override
+    public void repair() {
+        System.out.println(getModel() + " " + getBrand() + " ремонт закончен");
     }
 
     @Override

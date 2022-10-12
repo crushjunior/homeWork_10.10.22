@@ -1,3 +1,5 @@
+package Data;
+
 import Data.Data;
 
 public class Main {
