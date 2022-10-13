@@ -36,6 +36,9 @@ public class Main {
         Mechanic<CargoCar> oleg = new Mechanic<CargoCar>("Олег Подорожкин", "Red Bull");
         Mechanic<PassengerCar> alex = new Mechanic<PassengerCar>("Алексей Головин", "Shelby");
 
+        Sto<Car> genergy = new Sto<>();
+
+
         subaru.addMechanic(vitya);
         subaru.addMechanic(alex);
         subaru.addSponsor(lg, bq);
@@ -87,7 +90,18 @@ public class Main {
         printInfo(subaru);
         System.out.println();
         printInfo(man, faw);
-
+        System.out.println();
+        genergy.addPassCar(subaru);
+        genergy.addPassCar(oka);
+        genergy.addPassCar(mitsu);
+        genergy.addPassCar(bmw);
+        System.out.println();
+        genergy.addCargoCar(kamaz);
+        genergy.addCargoCar(man);
+        genergy.addCargoCar(scania);
+        genergy.addCargoCar(renault);
+        System.out.println();
+        genergy.service();
 
     }
 
